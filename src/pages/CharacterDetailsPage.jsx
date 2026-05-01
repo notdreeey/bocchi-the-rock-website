@@ -12,7 +12,7 @@ export default function CharacterDetailsPage({ characters }) {
     <section id="char-sc" className="character-section">
       <div className="character-details">
         <h2>{character.name}</h2>
-        <img src={`/images/${character.image_path}`} alt={character.name} />
+        <img src={`/images/${character.image_path}`} alt={character.name} loading="lazy" decoding="async" />
         <p>Role: {character.role}</p>
         <p>{character.info}</p>
         <Link to="/characters">Back to character list</Link>

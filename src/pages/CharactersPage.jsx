@@ -28,6 +28,8 @@ export default function CharactersPage({ characters, search, setSearch, onDelete
                 className="character-image"
                 src={`/images/${char.image_path}`}
                 alt={char.name}
+                loading="lazy"
+                decoding="async"
               />
               <h3>
                 <Link to={`/characters/${char.id}`}>{char.name}</Link>

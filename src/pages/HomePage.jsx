@@ -45,7 +45,7 @@ export default function HomePage() {
             {arts.map((art) => (
               <div className="design-item" key={art.title}>
                 <div className="design-img">
-                  <img id="art" src={`/images/${art.image}`} alt={art.title} />
+                  <img id="art" src={`/images/${art.image}`} alt={art.title} loading="lazy" decoding="async" />
                   <span>{art.likes}</span>
                   <span>{art.type}</span>
                 </div>
@@ -67,16 +67,16 @@ export default function HomePage() {
 
             <div className="insta-grid grid">
               <div>
-                <img src="/images/ryoofficial1.jpg" alt="Ryo Official" />
+                <img src="/images/ryoofficial1.jpg" alt="Ryo Official" loading="lazy" decoding="async" />
               </div>
               <div>
-                <img src="/images/kitaofficial1.jpg" alt="Kita Official" />
+                <img src="/images/kitaofficial1.jpg" alt="Kita Official" loading="lazy" decoding="async" />
               </div>
               <div>
-                <img src="/images/nijikaofficial1.jpg" alt="Nijika Official" />
+                <img src="/images/nijikaofficial1.jpg" alt="Nijika Official" loading="lazy" decoding="async" />
               </div>
               <div>
-                <img src="/images/hitoriofficial1.jpg" alt="Hitori Official" />
+                <img src="/images/hitoriofficial1.jpg" alt="Hitori Official" loading="lazy" decoding="async" />
               </div>
             </div>
           </div>
@@ -94,7 +94,7 @@ export default function HomePage() {
             {news.map((item) => (
               <div className="blog-item" key={item.title}>
                 <div className="blog-img">
-                  <img id="news" src={`/images/${item.image}`} alt={item.title} />
+                  <img id="news" src={`/images/${item.image}`} alt={item.title} loading="lazy" decoding="async" />
                   <span>❤</span>
                 </div>
 
@@ -116,7 +116,7 @@ export default function HomePage() {
         <div className="container">
           <div className="about-content">
             <div id="about-img-div">
-              <img id="about-img" src="/images/bocchiphoto1.jpg" alt="kessoku" />
+              <img id="about-img" src="/images/bocchiphoto1.jpg" alt="kessoku" loading="lazy" decoding="async" />
             </div>
             <div className="about-text">
               <div className="title">

@@ -45,7 +45,8 @@ img {
 /* HOME PAGES */
 header {
   min-height: 100vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)),
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)),
     url(../images/bocchi2.jpg) center/cover no-repeat fixed; /*PARALLAX EFFECT*/
   display: flex;
   flex-direction: column;
@@ -54,7 +55,8 @@ header {
 
 .character-background {
   min-height: 100vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)),
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)),
     url(../images/bocchi3.jpg) center/cover no-repeat fixed; /*PARALLAX EFFECT*/
   display: flex;
   flex-direction: column;
@@ -62,7 +64,8 @@ header {
 }
 .background3 {
   min-height: 100vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)),
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)),
     url(../images/bocchi5.jpg) center/cover no-repeat fixed; /*PARALLAX EFFECT*/
   display: flex;
   flex-direction: column;
@@ -70,15 +73,17 @@ header {
 }
 .background4 {
   min-height: 100vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)),
-    url(../images/bocchi6.jpg) center/cover no-repeat fixed; /*PARALLAX EFFECT*/
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)),
+    url(../images/bocchi5.jpg) center/cover no-repeat fixed; /*PARALLAX EFFECT*/
   flex-direction: column;
   justify-content: stretch;
 }
 .background5 {
   min-height: 100vh;
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)),
-    url(../images/kessokuart2.jpg) center/cover no-repeat fixed;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)),
+    url(../images/kessokuofficial1.jpg) center/cover no-repeat fixed;
   display: flex;
   flex-direction: column;
   justify-content: stretch;
@@ -353,7 +358,8 @@ header {
 
 /* PHOTOSHOOT */
 #showc {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)),
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)),
     url(../images/bocchi.jpg) center/cover no-repeat fixed;
   min-height: 45vh;
 }
@@ -465,7 +471,9 @@ footer {
   text-align: center;
   cursor: pointer;
   display: none;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease;
   z-index: 1000;
 }
 
@@ -568,7 +576,9 @@ footer {
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
   text-align: center;
   padding: 20px;
   display: flex;
@@ -953,7 +963,9 @@ footer {
   padding: 10px 15px;
   text-decoration: none;
   display: block;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
   text-transform: capitalize;
 }
 
@@ -1037,5 +1049,17 @@ footer {
 
   .search-button {
     width: 80%;
+  }
+}
+
+/* Performance fallback for mobile/tablet browsers */
+@media (max-width: 1024px) {
+  header,
+  .character-background,
+  .background3,
+  .background4,
+  .background5,
+  #showc {
+    background-attachment: scroll;
   }
 }

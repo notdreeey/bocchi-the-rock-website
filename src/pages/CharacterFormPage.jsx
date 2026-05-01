@@ -62,6 +62,8 @@ export default function CharacterFormPage({ characters, onSave }) {
               style={{ display: "block" }}
               src={`/images/${imagePath || "bocchiart2.jpg"}`}
               alt="Image Preview"
+              loading="lazy"
+              decoding="async"
             />
           </div>
 
