@@ -74,12 +74,13 @@
             <!-- BACK TO CHARACTER LIST BUTTON -->
             <?php if (isset($_GET['name']) && !empty($_GET['name'])): ?>
                 <div class="back-button">
-                    <a href="index.php?command=character#character-list" class="button" style="color: white">Back to Character List</a>
+                    <a href="index.php?command=character#character-list" class="button" style="color: white">Back to
+                        Character List</a>
                 </div>
             <?php endif; ?>
         </div>
     </section>
-    <?php include('footer.php'); ?>
 
 </body>
+
 </html>
