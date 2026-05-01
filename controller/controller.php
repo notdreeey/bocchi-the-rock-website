@@ -61,7 +61,7 @@ class Controller
                         if (strpos($result, 'successfully') !== false && !empty($imagePath)) {
                             $fullImagePath = 'uploads/' . $imagePath; // Construct full path to image
                             if (file_exists($fullImagePath)) {
-                                //unlink($fullImagePath); // Delete the file
+                                // Vercel file system is read-only at runtime; keep this as a no-op.
                             }
                         }
 
@@ -131,7 +131,7 @@ class Controller
                         if (!empty($currentImagePath)) { // Delete old image if it exists
                             $oldImagePath = $uploadDir . $currentImagePath;
                             if (file_exists($oldImagePath)) {
-                                unlink($oldImagePath); // Delete old image file
+                                // Vercel file system is read-only at runtime; skip unlink.
                             }
                         }
 
@@ -140,7 +140,7 @@ class Controller
                             $targetPath = $uploadDir . $uniqueName;
                         } while (file_exists($targetPath));
 
-                        if (true) { // <-- FORCED TRUE FOR VERCEL MOCK
+                        if (true) { // Keep mock mode for Vercel deployment
                             $filename = $imageFileName;
                         } else {
                             echo '<script>alert("Error uploading your file.");</script>'; // If upload is unsuccessful
@@ -152,7 +152,6 @@ class Controller
                     }
 
                     $this->model->updateCharacter($character_id, $filename, $name, $role, $info); // Update character via Model function
-                    echo '<script>alert("Character updated successfully!");</script>';
                     header("Location: index.php?command=character#character-list");
                     exit();
                 }
@@ -214,7 +213,6 @@ class Controller
                     }
 
                     $result = $this->model->addCharacter($filename, $name, $role, $info); // Add the character via Model function
-                    echo '<script>alert("' . $result . '");</script>';
                     header("Location: index.php?command=character#character-list");
                     exit();
                 } else {
